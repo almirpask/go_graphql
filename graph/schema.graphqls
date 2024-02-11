@@ -6,15 +6,15 @@ type Category {
 }
 
 type Course {
-  id: Name!
+  id: ID!
   name: String!
   description: String
   category: Category!
 }
 
 input NewCategory {
-  name: string!
-  description: string
+  name: String!
+  description: String
 }
 
 input NewCourse {
@@ -25,7 +25,7 @@ input NewCourse {
 
 type Query {
   categories: [Category!]!
-  courses: [Courses!]!
+  courses: [Course!]!
 }
 
 type Mutation {
